@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FXGateway</title>
+    <title>API</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
     body {
@@ -53,7 +53,7 @@
 </head>
 
 <body>
-    <div class="page-header h3">FXGateway API</div>
+    <div class="page-header h3">API</div>
     <div class="container">
         <div class="row">
             <div class="col col-lg-6">
@@ -81,15 +81,15 @@
                     <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName3" style="margin-top: 10px" placeholder="Say hi to server to check your connection. Server will echo your message" />
                     <button type="submit" class="btn btn-md btn-primary mb-2" style="margin-top: 10px;" href="#">Send Message</button>
                     <div class="form-group" style="margin-top: 30px">
-                        <label class="h5" style="color: green;" for="exampleFormControlTextarea1">Messages from Citi</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Messages sent by Citi are seen here"></textarea>
+                        <label class="h5" style="color: green;" for="exampleFormControlTextarea1">Messages from Server</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Messages sent by Server are seen here"></textarea>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <div class="jumbotron">
-        Send request to Citi FXGateway REST API by pasting the JSON payload and hit submit. Open a web socket connection and keep listening to the updates from the server. Once the request is processed by Citi, you will receive response in the text area. If you close the tab or refresh the browser, then socket connection will be closed. Opening web socket connection in another tab opens a new web socket connection.
+        Send request to REST API by pasting the JSON payload and hit submit. Open a web socket connection and keep listening to the updates from the server. Once the request is processed by server, you will receive response in the text area. If you close the tab or refresh the browser, then socket connection will be closed. Opening web socket connection in another tab opens a new web socket connection.
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
