@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FXGateway</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        background-color: #444444;
+        text-align: left;
+    }
+
+    h4 {
+        color: white;
+        margin-top: 5px;
+    }
+
+    textarea {
+        margin-bottom: 10px;
+    }
+
+    .vl {
+        border-right: 3px solid green;
+        padding-right: 15px;
+        margin-top: 10px;
+        height: 550px;
+    }
+
+    .page-header {
+        color: #108001;
+        background-color: #E2E6E6;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 8px;
+        margin: auto;
+        border-bottom: 3px solid #eee;
+    }
+
+    .jumbotron {
+        padding-left: 20px;
+        background-color: #444444;
+        color: white;
+        border: 1px solid white;
+        padding-right: 10px;
+        margin: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page-header h3">FXGateway API</div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-6">
+                <div class="vl">
+                    <h4>Http Request</h4>
+                    <form>
+                        <div class="form-group">
+                            <label class="h5" style="color: green;" for="exampleFormControlTextarea1">JSON Request</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="JSON Payload"></textarea>
+                            <button type="submit" class="btn btn-md btn-primary mb-2">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col col-lg-6" style="padding-left: 0px">
+                <div style="margin-top: 10px;">
+                    <h4>Web Socket</h4>
+                </div>
+                <form>
+                    <label class="h5" style="color: green;" for="inlineFormInputName2">Client ID</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Type your clientID here" />
+                    <button type="submit" class="btn btn-md btn-primary mb-2" style="margin-top: 10px;" href="#">Open Socket</button>
+                    <button type="submit" class="btn btn-md btn-primary mb-2" style="margin-top: 10px; margin-left: 30px" href="#">Close Socket</button>
+                    <label class="h5" style="color: green; display: block; margin-top: 40px" for="inlineFormInputName3">Send Message to Server</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName3" style="margin-top: 10px" placeholder="Say hi to server to check your connection. Server will echo your message" />
+                    <button type="submit" class="btn btn-md btn-primary mb-2" style="margin-top: 10px;" href="#">Send Message</button>
+                    <div class="form-group" style="margin-top: 30px">
+                        <label class="h5" style="color: green;" for="exampleFormControlTextarea1">Messages from Citi</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Messages sent by Citi are seen here"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        Send request to Citi FXGateway REST API by pasting the JSON payload and hit submit. Open a web socket connection and keep listening to the updates from the server. Once the request is processed by Citi, you will receive response in the text area. If you close the tab or refresh the browser, then socket connection will be closed. Opening web socket connection in another tab opens a new web socket connection.
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
